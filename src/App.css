@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-  }
-  
+    font-family: century-gothic, sans-serif;
+}
+
 .header-container {
     background-color: #665CAB;
     height: 50px;
@@ -13,7 +13,7 @@
     color: white;
     padding: 1rem 5%;
     justify-content: space-between;
-  }
+}
 
 .nav-button-container {
     display: flex;
@@ -26,10 +26,9 @@
     display: flex;
     flex-flow: row-reverse;
 
-  }
+}
 
-
-  .nav-button {
+.nav-button {
     background-color: #665CAB;
     border: 0ch;
     font-weight: 400;
@@ -43,23 +42,23 @@
     width: 100px;
     color: white;
     justify-content: center;
-  }
+}
 
-  .character-cards-container {
+.character-cards-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  }
+}
 
-  .handle-filter-container {
+.handle-filter-container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-  }
+}
 
-  .handle-filter {
+.handle-filter {
     width: 50%;
     min-width: 350px;
     min-height: 40px;
@@ -67,13 +66,13 @@
     border-radius: 10px;
     border: 1px solid #dcdcdc;
     padding-left: 8px;
-  }
+}
 
-  .handle-filter::placeholder {
+.handle-filter::placeholder {
     color: white;
-  }
+}
 
-  .character-card {
+.character-card {
     margin: 5px;
     border: 1px solid #dcdcdc;
     border-radius: 10px;
@@ -84,13 +83,13 @@
     padding-bottom: 5px;
     width: 250px;
     overflow: hidden;
-  }
+}
 
-  .character-card p {
+.character-card p {
     margin: 3px;
-  }
+}
 
-  .character-card button {
+.character-card button {
     width: 45%;
     background-color: #665CAB;
     color: aliceblue;
@@ -99,9 +98,39 @@
     padding: 5px;
     border-radius: 3px;
     border: none;
-  }
+}
 
-  h1 {
+.detail-page-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+.detail-page-container img {
+    width: 375px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.detail-page-details {
+    margin: 20px;
+}
+
+
+
+h1 {
     text-align: center;
     padding-bottom: 8px;
-  }
+}
+
+.about-banner {
+    width: 100%;
+}
+
+h2 {
+    padding: 10px;
+}
+
+p {
+    padding: 10px;
+}

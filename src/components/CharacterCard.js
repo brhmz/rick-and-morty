@@ -1,12 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 
 function CharacterCard({character}) {
+  let navigate = useNavigate();
     
   return (
     <div className='character-card'>
         <img src={character.image}/>
         <p>{character.name}</p>
-        <button>See Details</button>
+        <button onClick={() => navigate(`/character/${character.id}`)}>See Details</button>
     </div>
   )
 }

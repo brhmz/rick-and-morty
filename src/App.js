@@ -12,6 +12,8 @@ import DetailPage from './pages/DetailPage';
 
 function App() {
 
+  
+
 
 
 
