@@ -1,28 +1,29 @@
 import './App.css';
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
 import CharacterCard from './components/CharacterCard';
 import HomePage from './pages/HomePage';
+import About from './pages/About';
+import DetailPage from './pages/DetailPage';
 
 function App() {
 
-  const [allCharacters, setAllCharacters] = useState([]);
 
 
-  useEffect(() => {
-    axios.get('https://rickandmortyapi.com/api/character')
-      .then(response => setAllCharacters(response.data.results))
-      .catch(err => console.log(err))
-  }, [])
 
-console.log(allCharacters)
   return (
-    <div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/character/:id' element={<DetailPage/>} />
 
-    </div>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
