@@ -8,20 +8,26 @@ function HomePage() {
 
   const [allCharacters, setAllCharacters] = useState([]);
 
-
   useEffect(() => {
     axios.get('https://rickandmortyapi.com/api/character')
       .then(response => setAllCharacters(response.data.results))
       .catch(err => console.log(err))
   }, [])
 
-
-
+  const handleKeyDown = (e) => {
+    if(e.key === 'Enter') {
+      e = e.target.value;
+      console.log(e)
+      axios.get(`https://rickandmortyapi.com/api/character/?name=${e}`)
+      .then(response => setAllCharacters(response.data.results.name.includes(e) === true ? response.data.results : ''))
+      .catch(err => alert('That character does not exist. Try again'))
+  }
+}
   return (
     <div>
           <Header/>
         <div className='handle-filter-container'>
-          <input placeholder='Search any character with name' className='handle-filter'/>
+          <input onKeyDown={handleKeyDown} placeholder='Search any character with name' className='handle-filter'/>
         </div>
           <h1>Rick and Morty Main Characters</h1>
         <div className='character-cards-container'>
