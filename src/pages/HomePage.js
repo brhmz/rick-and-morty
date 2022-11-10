@@ -19,7 +19,7 @@ function HomePage() {
       e = e.target.value;
       console.log(e)
       axios.get(`https://rickandmortyapi.com/api/character/?name=${e}`)
-      .then(response => setAllCharacters(response.data.results.name.includes(e) === true ? response.data.results : ''))
+      .then(response => setAllCharacters(response.data.results))
       .catch(err => alert('That character does not exist. Try again'))
   }
 }
