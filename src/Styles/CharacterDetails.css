@@ -1,0 +1,15 @@
+.detail-page-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+}
+
+.detail-page-container img {
+    width: 375px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.detail-page-details {
+    margin: 20px;
+}

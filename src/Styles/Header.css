@@ -1,0 +1,32 @@
+.header-container {
+    background-color: #665CAB;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 2% 5%;
+    justify-content: space-between;
+}
+
+.nav-button-container {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.profile-container {
+    width: 20%;
+    display: flex;
+}
+
+.nav-button {
+    background-color: #665CAB;
+    border: 0ch;
+    font-weight: 400;
+    font-size: medium;
+    outline: none;
+    cursor: pointer;
+    height: 25px;
+    width: 100px;
+    color: white;
+}

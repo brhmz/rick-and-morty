@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/HomePage.css'
 import CharacterCard from '../components/CharacterCard'
 import Header from '../components/Header'
 import { useEffect, useState } from 'react';
@@ -24,8 +25,7 @@ function HomePage() {
   }
 }
   return (
-    <div>
-          <Header/>
+    <div className='home-page-container'>
         <div className='handle-filter-container'>
           <input onKeyDown={handleKeyDown} placeholder='Search any character with name' className='handle-filter'/>
         </div>

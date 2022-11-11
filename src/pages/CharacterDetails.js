@@ -1,14 +1,14 @@
 import React from 'react'
+import '../Styles/CharacterDetails.css'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { useState } from 'react'
-import Header from '../components/Header'
 
 function DetailPage() {
 
   let navigate = useNavigate();
-  const { id } = useParams();     //Bunu konusalim
+  const { id } = useParams();  
   const [selectedCharacter, setSelectedCharacter] = useState(null);
 
   useEffect(() => {
@@ -19,15 +19,14 @@ function DetailPage() {
 
   return (
     <div>
-      <Header />
       <div className='detail-page-container'>
-        <img src={selectedCharacter != null ? selectedCharacter.image : ''} />
+        <img src={selectedCharacter?.image} />
         <div className='detail-page-details'>
-          <p><b>Name:</b> {selectedCharacter != null ? selectedCharacter.name : ''}</p>
-          <p><b>Gender:</b> {selectedCharacter != null ? selectedCharacter.gender : ''}</p>
-          <p><b>Location:</b> {selectedCharacter != null ? selectedCharacter.location.name : ''}</p>
-          <p><b>Species:</b> {selectedCharacter != null ? selectedCharacter.species : ''}</p>
-          <p><b>Status:</b> {selectedCharacter != null ? selectedCharacter.status : ''}</p>
+          <p><b>Name:</b> {selectedCharacter?.name}</p>
+          <p><b>Gender:</b> {selectedCharacter?.gender}</p>
+          <p><b>Location:</b> {selectedCharacter?.location.name}</p>
+          <p><b>Species:</b> {selectedCharacter?.species}</p>
+          <p><b>Status:</b> {selectedCharacter?.status}</p>
         </div>
       </div>
     </div>

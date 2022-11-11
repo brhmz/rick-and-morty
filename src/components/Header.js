@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/Header.css'
 import { useNavigate } from 'react-router'
 
 function Header() {
