@@ -1,3 +1,12 @@
+.home-page-container {
+ background-color: white;
+}
+
+.home-page-container h1 {
+    text-align: center;
+    padding-bottom: 8px;
+}
+
 .handle-filter-container {
     display: flex;
     justify-content: center;
@@ -20,7 +29,3 @@
     color: white;
 }
 
-.home-page-container h1 {
-    text-align: center;
-    padding-bottom: 8px;
-}

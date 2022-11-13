@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/HomePage.css'
+import '../Styles/homePage.css'
 import CharacterCard from '../components/CharacterCard'
 import Header from '../components/Header'
 import { useEffect, useState } from 'react';

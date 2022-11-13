@@ -1,21 +1,24 @@
-import React from 'react'
-import '../Styles/Header.css'
-import { useNavigate } from 'react-router'
+import React, { useContext } from 'react'
+import '../Styles/header.css'
+import {Link} from 'react-router-dom'
+import { UserContext } from '../contexts/UserContext'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 function Header() {
 
-  let navigate = useNavigate();
+  const {username} = useContext(UserContext)
+  const {darkMode, setDarkMode} =  useContext(ThemeContext)
 
   return (
     <div>
       <div className='header-container'>
         <div className='nav-button-container'>
-          <button className='nav-button' onClick={() => { navigate("/")}} >Home</button>
-          <button className='nav-button' onClick={() => { navigate("/about")}} >About</button>
+          <Link className='nav-button' to='/' >Home</Link>
+          <Link className='nav-button' to='/about' >About</Link>
         </div>        
         <div className='profile-container'>
-          <img/>
-          <p>Ibrahim OZ</p>
+          <p>{username}</p>
+          <button className='theme-button' onClick={()=>setDarkMode(!darkMode)}>{!darkMode ? 'Dark Mode' : 'Light Mode'}</button>
         </div>
       </div>
     </div>

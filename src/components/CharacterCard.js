@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/CharacterCard.css'
+import '../Styles/characterCard.css'
 import { useNavigate } from 'react-router'
 
 function CharacterCard({character}) {

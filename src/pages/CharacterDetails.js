@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Styles/CharacterDetails.css'
+import '../Styles/characterDetails.css'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router'
