@@ -8,11 +8,17 @@
     justify-content: space-between;
 }
 
+.header-container-dark {
+    background-color: #434343;
+}
+
 .nav-button-container {
     display: flex;
     width: 50%;
     justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0);
 }
+
 
 .profile-container {
     width: 20%;
@@ -20,7 +26,7 @@
 }
 
 .nav-button {
-    background-color: #665CAB;
+    background-color: #ffffff00;
     border: 0ch;
     font-weight: 400;
     font-size: medium;
@@ -30,4 +36,16 @@
     width: 100px;
     color: white;
     text-decoration: none;
+}
+
+.theme-button {
+    background-color: #ffffff00;
+    border: 0ch;
+    font-weight: 400;
+    font-size: medium;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
 }

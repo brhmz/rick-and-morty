@@ -2,6 +2,11 @@
     display: flex;
     justify-content: center;
     padding-top: 1.5rem;
+    background-color: white;
+}
+
+.detail-page-container-dark {
+    background-color: black;
 }
 
 .detail-page-container img {
@@ -12,4 +17,8 @@
 
 .detail-page-details {
     margin: 20px;
+}
+
+.detail-page-details-dark {
+   color: white;
 }

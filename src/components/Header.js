@@ -11,14 +11,15 @@ function Header() {
 
   return (
     <div>
-      <div className='header-container'>
+      <div className={!darkMode ? 'header-container' : 'header-container header-container-dark'}>
         <div className='nav-button-container'>
           <Link className='nav-button' to='/' >Home</Link>
           <Link className='nav-button' to='/about' >About</Link>
         </div>        
         <div className='profile-container'>
           <p>{username}</p>
-          <button className='theme-button' onClick={()=>setDarkMode(!darkMode)}>{!darkMode ? 'Dark Mode' : 'Light Mode'}</button>
+          <button className={!darkMode ? 'theme-button' : 'theme-button theme-button-dark'} onClick={()=>setDarkMode(!darkMode)}>{!darkMode ? 'Dark Mode' : 'Light Mode'}</button>
+          
         </div>
       </div>
     </div>

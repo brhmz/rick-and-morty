@@ -9,3 +9,13 @@
 .about p {
     padding: 10px;
 }
+
+.about {
+    background-color: white;
+    color: black;
+}
+
+.about-dark {
+    background-color: black;
+    color: white;
+}

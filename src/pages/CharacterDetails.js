@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import '../Styles/characterDetails.css'
 import axios from 'axios'
 import { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router'
 import { useState } from 'react'
+import { ThemeContext } from '../contexts/ThemeContext'
 
 function DetailPage() {
 
   let navigate = useNavigate();
   const { id } = useParams();  
   const [selectedCharacter, setSelectedCharacter] = useState(null);
+  const {darkMode, setDarkMode} =  useContext(ThemeContext)
 
   useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/character/${id}`)
@@ -19,9 +21,9 @@ function DetailPage() {
 
   return (
     <div>
-      <div className='detail-page-container'>
+      <div className={!darkMode ? 'detail-page-container' : 'detail-page-container detail-page-container-dark'}>
         <img src={selectedCharacter?.image} />
-        <div className='detail-page-details'>
+        <div className={!darkMode ? 'detail-page-details' : 'detail-page-details detail-page-details-dark'}>
           <p><b>Name:</b> {selectedCharacter?.name}</p>
           <p><b>Gender:</b> {selectedCharacter?.gender}</p>
           <p><b>Location:</b> {selectedCharacter?.location.name}</p>
