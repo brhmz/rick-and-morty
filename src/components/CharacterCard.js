@@ -5,6 +5,7 @@ import { ThemeContext } from '../contexts/ThemeContext'
 
 
 function CharacterCard({character}) {
+  
   let navigate = useNavigate();
   const {darkMode, setDarkMode} =  useContext(ThemeContext)
     

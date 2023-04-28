@@ -9,10 +9,11 @@ import { ThemeContext } from '../contexts/ThemeContext'
 function DetailPage() {
 
   let navigate = useNavigate();
-  const { id } = useParams();  
+  const { id } = useParams();
   const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const {darkMode, setDarkMode} =  useContext(ThemeContext)
+  const { darkMode, setDarkMode } = useContext(ThemeContext)
 
+  //Lists the selected character with its api url.
   useEffect(() => {
     axios.get(`https://rickandmortyapi.com/api/character/${id}`)
       .then(response => setSelectedCharacter(response.data))

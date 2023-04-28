@@ -9,11 +9,6 @@ import ContextReducer from './contexts/index'
 
 function App() {
 
-  
-
-
-
-
   return (
     <BrowserRouter>
       <ContextReducer>    
